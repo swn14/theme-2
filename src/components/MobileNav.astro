@@ -1,0 +1,27 @@
+<div class="mobile-nav">
+  <div>
+    <a href="/"><button>Home</button></a>
+    <a href="/about"><button>About</button></a>
+    <a href="/contact"><button>Contact</button></a>
+  </div>
+</div>
+
+<style>
+  .mobile-nav > div {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: var(--primary);
+  }
+
+  .mobile-nav a,
+  .mobile-nav button {
+    width: 100%;
+  }
+
+  /* Styles for screens wider than 768px (tablets and up) */
+  @media screen and (min-width: 768px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+</style>

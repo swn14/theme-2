@@ -1,0 +1,188 @@
+---
+import Footer from "../components/Footer.astro";
+import TopNav from "../components/TopNav.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <TopNav />
+      </section>
+      <section>
+        <main>
+          <section class="hero">
+            <h1>Welcome to Your Amazing Site</h1>
+            <p class="hero-subtitle">
+              Built with Astro and styled with Pico CSS for a clean, modern
+              experience.
+            </p>
+            <div class="cta-buttons">
+              <button class="primary">Get Started</button>
+              <button class="secondary">Learn More</button>
+            </div>
+          </section>
+
+          <section class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <h3>🚀 Fast</h3>
+                <p>
+                  Lightning-fast performance with Astro's static site
+                  generation.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h3>🎨 Beautiful</h3>
+                <p>Clean, accessible design with Pico CSS framework.</p>
+              </div>
+              <div class="feature-card">
+                <h3>📱 Responsive</h3>
+                <p>Looks great on desktop, tablet, and mobile devices.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="about">
+            <h2>About This Project</h2>
+            <p>
+              This is a sample home page demonstrating how to structure content
+              in Astro components. The design uses CSS custom properties for
+              theming and Pico CSS for base styling.
+            </p>
+            <blockquote>
+              "The best way to predict the future is to create it."
+              <cite>— Peter Drucker</cite>
+            </blockquote>
+          </section>
+        </main>
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--primary-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features {
+    margin-bottom: 3rem;
+  }
+
+  .features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about {
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .about h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    border-left: 4px solid;
+    padding-left: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+
+  cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-buttons button {
+      width: 200px;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    .about {
+      padding: 2rem 1rem;
+    }
+  }
+</style>

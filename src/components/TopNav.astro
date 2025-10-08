@@ -1,0 +1,43 @@
+---
+import MobileNav from "./MobileNav.astro";
+---
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="/"><button>Home</button></a></li>
+      <li><a href="/about"><button>About</button></a></li>
+      <li><a href="/contact"><button>Contact</button></a></li>
+    </ul>
+  </nav>
+  <MobileNav />
+</header>
+
+<style>
+  header {
+    background-color: var(--primary);
+  }
+
+  nav {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  /* Styles for screens wider than 768px (tablets and up) */
+  @media screen and (min-width: 768px) {
+    nav {
+      display: block;
+    }
+  }
+</style>

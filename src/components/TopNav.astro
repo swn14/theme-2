@@ -1,13 +1,28 @@
 ---
 import MobileNav from "./MobileNav.astro";
+const { pathname } = Astro.url;
 ---
 
 <header>
   <nav>
     <ul>
-      <li><a href="/"><button>Home</button></a></li>
-      <li><a href="/about"><button>About</button></a></li>
-      <li><a href="/contact"><button>Contact</button></a></li>
+      <li>
+        <a href="/">
+          <button class={pathname === "/" ? "active" : ""}>Home</button>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <button class={pathname === "/about" ? "active" : ""}>About</button>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <button class={pathname === "/contact" ? "active" : ""}
+            >Contact</button
+          ></a
+        >
+      </li>
     </ul>
   </nav>
   <MobileNav />
@@ -28,6 +43,11 @@ import MobileNav from "./MobileNav.astro";
 
   li {
     margin: 0;
+  }
+
+  button.active {
+    background-color: var(--pico-primary-hover-background);
+    font-weight: bold;
   }
 
   /* Styles for screens wider than 768px (tablets and up) */

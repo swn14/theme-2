@@ -1,8 +1,19 @@
+---
+const { pathname } = Astro.url;
+---
+
 <div class="mobile-nav">
   <div>
-    <a href="/"><button>Home</button></a>
-    <a href="/about"><button>About</button></a>
-    <a href="/contact"><button>Contact</button></a>
+    <a href="/"
+      ><button class={pathname === "/" ? "active" : ""}>Home</button></a
+    >
+    <a href="/about"
+      ><button class={pathname === "/about" ? "active" : ""}>About</button></a
+    >
+    <a href="/contact"
+      ><button class={pathname === "/contact" ? "active" : ""}>Contact</button
+      ></a
+    >
   </div>
 </div>
 
@@ -16,6 +27,11 @@
   .mobile-nav a,
   .mobile-nav button {
     width: 100%;
+  }
+
+  button.active {
+    background-color: var(--pico-primary-hover-background);
+    font-weight: bold;
   }
 
   /* Styles for screens wider than 768px (tablets and up) */

@@ -1,31 +1,71 @@
-# Astro Starter Kit: Minimal
+# Theme 2 - Modern Astro Website Template
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A clean, modern website template built with Astro and styled using Pico CSS. This is the second theme in a collection of pre-made templates designed for quick website development.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- **Clean & Modern Design**: Minimalist aesthetic with Pico CSS classless styling
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Fast Performance**: Built with Astro for optimal loading speeds
+- **Accessible**: Semantic HTML with proper accessibility features
+- **Easy Customization**: Well-organized component structure for quick modifications
 
-Inside of your Astro project, you'll see the following folders and files:
+## Styling with Pico CSS
+
+This theme uses **Pico CSS v2** (classless version), which provides:
+
+- **Zero Configuration**: No CSS classes needed - just write semantic HTML
+- **Automatic Dark Mode**: Built-in dark/light theme switching
+- **Accessibility First**: WCAG compliant with proper focus states and contrast
+- **CSS Variables**: Easy theming with CSS custom properties
+- **Small Footprint**: Lightweight framework (~10KB gzipped)
+- **Modern Features**: CSS Grid, Flexbox, and modern CSS properties
+
+Pico CSS automatically styles HTML elements, making it perfect for content-focused websites. The classless approach means you get beautiful styling without writing CSS classes.
+
+## Project Structure
 
 ```text
 /
 ├── public/
+│   ├── favicon.svg
+│   └── styles.css          # Custom styles (extends Pico CSS)
 ├── src/
+│   ├── components/
+│   │   ├── Footer.astro    # Site footer component
+│   │   ├── MobileNav.astro # Mobile navigation
+│   │   └── TopNav.astro    # Main navigation
+│   ├── layouts/
+│   │   ├── Home.astro      # Homepage layout
+│   │   └── SinglePage.astro # Internal page layout
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro     # Homepage
+│       ├── about/
+│       │   └── index.astro # About page
+│       └── contact/
+│           └── index.astro # Contact page
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. **Clone or download** this theme
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Install dependencies**:
 
-## 🧞 Commands
+   ```sh
+   npm install
+   ```
+
+3. **Start development server**:
+
+   ```sh
+   npm run dev
+   ```
+
+4. **Open your browser** to `http://localhost:4321`
+
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -38,6 +78,36 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Customization
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Colors & Theming
+
+Pico CSS uses CSS custom properties for theming. You can override the default colors in `public/styles.css`:
+
+```css
+:root {
+  --pico-primary: #your-brand-color;
+  --pico-background-color: #your-bg-color;
+}
+```
+
+### Adding Content
+
+- Edit `src/pages/index.astro` to modify the homepage
+- Add new pages in the `src/pages/` directory
+- Customize components in `src/components/`
+- Update layouts in `src/layouts/`
+
+### Mobile Navigation
+
+The theme includes a responsive mobile navigation component that automatically adapts to smaller screens.
+
+## Learn More
+
+- [Astro Documentation](https://docs.astro.build) - Learn about Astro features
+- [Pico CSS Documentation](https://picocss.com) - Explore Pico CSS capabilities
+- [Pico CSS GitHub](https://github.com/picocss/pico) - Source code and examples
+
+## License
+
+This theme is open source and available under the MIT License.
